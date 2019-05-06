@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Choose Your Tee</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="teesDesign">
+  <div clas="teeContainer">
+    <ion-list> 
+      <ion-item *ngFor="let tee of tees" (click)="teeChosen($event, this.navParams.data.courseId, tee)" class="tee">
+        {{tee.tee}}
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

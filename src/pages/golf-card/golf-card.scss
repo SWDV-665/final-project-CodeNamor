@@ -1,0 +1,115 @@
+.cardDesign {
+    background: linear-gradient(to bottom, #b4ddb4 0%,#83c783 17%,#52b152 33%,#008a00 67%,#005700 83%,#002400 100%);
+  }
+  
+  .scoreCard{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  .topInfo {
+    display: flex;
+    width: 100%;
+  }
+  
+  .holeInfoHeader {
+    width: 32px;
+    border: 1px solid dimgrey;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 5px 9px;
+    text-align: center;
+  }
+  
+  .holeInfo {
+    justify-content: center;
+    width: 32px;
+    border: 1px solid dimgrey;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .holeData {
+    display: flex;
+  }
+  
+  #totalInSection, #totalOutSection, #allTotalSection {
+    display: flex;
+    // background-color: #e8eaef;
+  }
+  
+  .totalsIn, .totalsOut, .allTotals {
+    justify-content: center;
+    width: 32px;
+    border: 1px solid dimgrey;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .rowTitle {
+    text-transform: uppercase;
+  }
+  
+  ion-app.md [padding] .scroll-content {
+    padding: 4px;
+  }
+  
+  .playerLabel {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid dimgrey; 
+    width: 48px;
+    padding: 5px 15px 5px 15px;
+  }
+  
+  .scores {
+    width: 48px;
+  }
+  
+  .totalGrey {
+    background-color: #cccccc;
+  }
+  
+  .outHoleInfo {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .holeInput{
+    border: 1px solid dimgrey;
+    width: 48px;
+    height: 32px;
+    background-color: #e8eaef;
+  }
