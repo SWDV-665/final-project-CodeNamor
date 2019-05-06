@@ -1,10 +1,10 @@
-import { IonicPage, LoadingController, NavController, NavParams } from 'ionic-angular';
+import { LoadingController, NavController, NavParams } from '@ionic/angular';
 
-import { AllTeesPage } from '../all-tees/all-tees';
+import { TeesPage } from '../tees/tees';
 import { Component } from '@angular/core';
 import {CoursesApiService} from "../../services/courses-api.service";
+import { async } from 'q';
 
-@IonicPage()
 @Component({
   selector: 'page-all-courses',
   templateUrl: 'all-courses.html',
@@ -18,23 +18,23 @@ export class CoursesPage {
     this.selectedItem = navParams.get('item');
     }
 
-  ionViewDidLoad() {
+  async ionViewDidLoad() {
     console.log('ionViewDidLoad CoursesPage');
 
-    const loader = this.loadingCtrl.create({
-      content: "Loading Local Courses.."
+     const loader = this.loadingCtrl.create({
+      message: "Loading Local Courses.."
     });
-    loader.present().then(() => {
+     await loader.present().then(() => {
       this.API.findCourses().subscribe(data => {
         this.courseOptions = data.courses;
-        loader.dismiss();
+        await loader.dismiss();
         console.log(this.courseOptions);
       });
     });
   }
 
   courseChosen(event, courseId) {
-    this.navCtrl.push(AllTeesPage, {
+    this.navCtrl.pop(AllTeesPage, {
       courseId: courseId
     });
   }
